@@ -1,10 +1,10 @@
-import { ExoPage } from './app.po';
+import { AppPage } from './app.po';
 
 describe('exo App', () => {
-  let page: ExoPage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new ExoPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
