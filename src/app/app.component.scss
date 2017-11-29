@@ -1,0 +1,34 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+app-root {
+  .flexbox-parent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  .flexbox-item-grow {
+    flex: 1;
+    /* same as flex: 1 1 auto; */
+  }
+
+  .fill-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  .fill-area-content {
+    overflow: auto;
+  }
+}
