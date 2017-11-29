@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatDialogModule, MatIconModule, MatMenuModule, MatInputModule, MatToolbarModule, MatCardModule, MatChipsModule } from "@angular/material";
+import { MatButtonModule, MatMenuTrigger, MatDialogModule, MatIconModule, MatMenuModule, MatInputModule, MatToolbarModule, MatCardModule, MatChipsModule } from "@angular/material";
 
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatChipsModule
   ],
   declarations: [
-    ToolbarComponent
+    ToolbarComponent,
+    MenuComponent
   ],
   exports: [
     MatButtonModule,
@@ -26,7 +28,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatToolbarModule,
     MatCardModule,
     MatChipsModule,
-    ToolbarComponent
+    MatIconModule,
+    ToolbarComponent,
+    MenuComponent
   ]
 })
 export class SharedModule { }
