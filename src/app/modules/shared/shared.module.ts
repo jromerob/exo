@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from '../../app-routing.module';
 import {
   MatButtonModule,
   MatMenuTrigger,
@@ -8,7 +9,8 @@ import {
   MatInputModule,
   MatToolbarModule,
   MatCardModule,
-  MatChipsModule
+  MatChipsModule,
+
 } from '@angular/material';
 
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -23,7 +25,8 @@ import { MenuComponent } from './menu/menu.component';
     MatInputModule,
     MatToolbarModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    AppRoutingModule
   ],
   declarations: [
     ToolbarComponent,
