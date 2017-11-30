@@ -9,8 +9,7 @@ describe('ToolbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SharedModule],
-      //declarations: [ ToolbarComponent ] // se importa en el modulo
+      imports: [SharedModule]
     })
       .compileComponents();
   }));

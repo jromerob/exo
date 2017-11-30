@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-import { SharedModule } from './shared/shared.module';
-import { HomeComponent } from './home/home.component';
+import { SharedModule } from './modules/shared/shared.module';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
