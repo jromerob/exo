@@ -3,15 +3,17 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 import { SharedModule } from './modules/shared/shared.module';
+import { ConsultantsModule } from './modules/consultants/consultants.module';
+import { HomeComponent } from './components/home/home.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule, SharedModule
+        RouterTestingModule, SharedModule, ConsultantsModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, HomeComponent
       ],
     }).compileComponents();
   }));

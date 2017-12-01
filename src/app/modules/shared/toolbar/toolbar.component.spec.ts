@@ -2,6 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToolbarComponent } from './toolbar.component';
 import { SharedModule } from '../shared.module';
+import { ConsultantsModule } from '../../consultants/consultants.module';
+import { HomeComponent } from '../../../components/home/home.component';
+
 
 describe('ToolbarComponent', () => {
   let component: ToolbarComponent;
@@ -9,7 +12,9 @@ describe('ToolbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SharedModule]
+      imports: [SharedModule, ConsultantsModule],
+      declarations: [HomeComponent]
+
     })
       .compileComponents();
   }));

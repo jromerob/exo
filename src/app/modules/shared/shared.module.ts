@@ -43,7 +43,7 @@ import { MenuComponent } from './menu/menu.component';
     MatChipsModule,
     MatIconModule,
     ToolbarComponent,
-    MenuComponent
+    MenuComponent,
   ]
 })
 export class SharedModule { }

@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConsultantsComponent } from './consultants.component';
+import { ConsultantsService } from '../consultants.service';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../../shared/shared.module';
 
 describe('ConsultantsComponent', () => {
   let component: ConsultantsComponent;
@@ -8,9 +11,11 @@ describe('ConsultantsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConsultantsComponent ]
+      imports: [HttpClientModule, SharedModule],
+      declarations: [ConsultantsComponent],
+      providers: [ConsultantsService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

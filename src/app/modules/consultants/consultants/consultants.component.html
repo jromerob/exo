@@ -1,3 +1,7 @@
-<p>
-  consultants works!
-</p>
+<mat-card *ngFor="let consultant of consultantsService.consultants">
+
+  <mat-card-title>{{ consultant.short_name }}</mat-card-title>
+  <!-- {{consultant.short_name}} -->
+  <img mat-card-image [src]="consultant.profile_picture" class="profile-id">
+  <mat-card-subtitle>{{ consultant.full_name }}</mat-card-subtitle>
+</mat-card>
