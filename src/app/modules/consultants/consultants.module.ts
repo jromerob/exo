@@ -4,10 +4,11 @@ import { ConsultantsComponent } from './consultants/consultants.component';
 import { ConsultantDetailComponent } from './consultant-detail/consultant-detail.component';
 import { ConsultantsService } from './consultants.service';
 import { SharedModule } from '../shared/shared.module';
+import { AppRoutingModule } from '../../app-routing.module';
 
 @NgModule({
   imports: [
-    CommonModule, SharedModule
+    CommonModule, SharedModule, AppRoutingModule
   ],
   declarations: [ConsultantsComponent, ConsultantDetailComponent],
   providers: [ConsultantsService],

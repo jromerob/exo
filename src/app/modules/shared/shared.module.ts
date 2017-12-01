@@ -10,6 +10,9 @@ import {
   MatToolbarModule,
   MatCardModule,
   MatChipsModule,
+  MatGridListModule,
+  MatProgressSpinnerModule,
+  MatExpansionModule
 
 } from '@angular/material';
 
@@ -26,6 +29,9 @@ import { MenuComponent } from './menu/menu.component';
     MatToolbarModule,
     MatCardModule,
     MatChipsModule,
+    MatGridListModule,
+    MatProgressSpinnerModule,
+
     AppRoutingModule
   ],
   declarations: [
@@ -43,7 +49,10 @@ import { MenuComponent } from './menu/menu.component';
     MatChipsModule,
     MatIconModule,
     ToolbarComponent,
+    MatGridListModule,
     MenuComponent,
+    MatProgressSpinnerModule,
+
   ]
 })
 export class SharedModule { }

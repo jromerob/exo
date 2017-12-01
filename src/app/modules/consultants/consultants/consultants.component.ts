@@ -9,11 +9,17 @@ import { ConsultantsService } from '../consultants.service';
 })
 export class ConsultantsComponent implements OnInit {
 
+  loadingData: boolean;
+
   constructor(private consultantsService: ConsultantsService) { }
 
   ngOnInit() {
 
-    this.consultantsService.getConsultants().subscribe();
+    this.loadingData = true;
+    this.consultantsService.getConsultants().subscribe(
+      () => this.loadingData = false,
+      () => this.loadingData = false
+    );
 
   }
 

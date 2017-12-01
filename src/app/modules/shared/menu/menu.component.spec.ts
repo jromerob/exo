@@ -4,6 +4,7 @@ import { MenuComponent } from './menu.component';
 import { SharedModule } from '../shared.module';
 import { ConsultantsModule } from '../../consultants/consultants.module';
 import { HomeComponent } from '../../../components/home/home.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
@@ -12,7 +13,8 @@ describe('MenuComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SharedModule, ConsultantsModule],
-      declarations: [HomeComponent]
+      declarations: [HomeComponent],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     })
       .compileComponents();
   }));

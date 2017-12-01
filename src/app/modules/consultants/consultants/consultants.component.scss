@@ -1,11 +1,17 @@
 app-consultants {
+  .consultant .mat-grid-tile .mat-figure {
+    justify-content: left;
+  }
+
   img.profile-id {
-    float: right;
+    margin: 0 auto auto !important;
     border-radius: 50%;
-    max-width: 69px;
-    position: absolute;
-    top: 1em;
-    right:: 1em;
-    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+  }
+
+  .mat-card-title {
+    margin: 0;
   }
 }

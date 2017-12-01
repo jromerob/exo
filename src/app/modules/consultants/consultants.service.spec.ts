@@ -3,6 +3,7 @@ import { TestBed, inject } from '@angular/core/testing';
 import { ConsultantsService } from './consultants.service';
 import { Http, ConnectionBackend, RequestOptions } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { JsonpModule } from '@angular/http';
 
 // import { Observable } from 'rxjs/Observable';
 // import { map } from 'rxjs/operators';
@@ -10,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 describe('ConsultantsService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [HttpClientModule, JsonpModule],
       providers: [ConsultantsService]
     });
   });

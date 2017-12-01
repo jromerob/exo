@@ -6,6 +6,10 @@ import { SharedModule } from './modules/shared/shared.module';
 import { ConsultantsModule } from './modules/consultants/consultants.module';
 import { HomeComponent } from './components/home/home.component';
 
+import { APP_BASE_HREF } from '@angular/common';
+
+
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -14,7 +18,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent, HomeComponent
-      ]
+      ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     }).compileComponents();
   }));
   it('Se Crea la app', async(() => {
