@@ -14,7 +14,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent, HomeComponent
-      ],
+      ]
     }).compileComponents();
   }));
   it('Se Crea la app', async(() => {

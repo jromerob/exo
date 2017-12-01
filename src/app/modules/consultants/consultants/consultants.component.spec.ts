@@ -4,6 +4,7 @@ import { ConsultantsComponent } from './consultants.component';
 import { ConsultantsService } from '../consultants.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../../shared/shared.module';
+import { HomeComponent } from '../../../components/home/home.component';
 
 describe('ConsultantsComponent', () => {
   let component: ConsultantsComponent;
@@ -12,7 +13,7 @@ describe('ConsultantsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule, SharedModule],
-      declarations: [ConsultantsComponent],
+      declarations: [ConsultantsComponent, HomeComponent],
       providers: [ConsultantsService]
     })
       .compileComponents();
