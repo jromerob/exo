@@ -1,26 +1,28 @@
 <mat-progress-spinner *ngIf="loadingData && !consultantsService.consultants" [color]="'primary'" [mode]="'indeterminate'" [value]="'50'">
 </mat-progress-spinner>
 
-<mat-card *ngFor="let consultant of consultantsService.consultants" class="consultant" [routerLink]="['/consultor', consultant.id]">
+<div class="container">
+  <mat-card *ngFor="let consultant of consultantsService.consultants" class="consultant" [routerLink]="['/consultor', consultant.id]">
 
-  <mat-grid-list cols="4" rowHeight="30px">
-    <mat-grid-tile [colspan]="3" [rowspan]="1" mat-chip-list>
-      <mat-card-title>
-        {{ consultant.short_name }}
-      </mat-card-title>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="3">
-      <img mat-card-image [src]="consultant.profile_picture" class="profile-id">
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="3" [rowspan]="1" mat-chip-list>
-      {{ consultant.full_name }}
-    </mat-grid-tile>
+    <mat-grid-list cols="4" rowHeight="30px">
+      <mat-grid-tile [colspan]="3" [rowspan]="1" mat-chip-list>
+        <mat-card-title>
+          {{ consultant.short_name }}
+        </mat-card-title>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="3">
+        <img mat-card-image [src]="consultant.profile_picture" class="profile-id">
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="3" [rowspan]="1" mat-chip-list>
+        {{ consultant.full_name }}
+      </mat-grid-tile>
 
-    <mat-grid-tile [colspan]="3" [rowspan]="1" mat-chip-list>
-      {{ consultant.email }}
-    </mat-grid-tile>
+      <mat-grid-tile [colspan]="3" [rowspan]="1" mat-chip-list>
+        {{ consultant.email }}
+      </mat-grid-tile>
 
-  </mat-grid-list>
+    </mat-grid-list>
 
 
-</mat-card>
+  </mat-card>
+</div>

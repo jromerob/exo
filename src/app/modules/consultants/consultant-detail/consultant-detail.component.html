@@ -1,7 +1,7 @@
 <mat-progress-spinner *ngIf="loadingData && !consultant" [color]="'primary'" [mode]="'indeterminate'" [value]="'50'">
 </mat-progress-spinner>
 
-<div *ngIf="consultant">
+<div *ngIf="consultant" class="container">
 
 
   <p> {{ consultant.created }}</p>
@@ -20,43 +20,47 @@
 
 
   <p>{{ consultant.comments }}</p>
+
+
+  <mat-card *ngIf="consultant" class="consultant">
+
+    <mat-grid-list cols="10" rowHeight="250px">
+
+      <mat-grid-tile [colspan]="8" [rowspan]="1" mat-chip-list>
+        <mat-card-title>
+          {{ consultant.full_name }}
+        </mat-card-title>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <img mat-card-image [src]="consultant.profile_picture" class="profile-id">
+      </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-list cols="10">
+
+
+
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        {{ consultant.id }}
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1" mat-chip-list>
+        {{ consultant.short_name }}
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1" mat-chip-list>
+        {{ consultant.email }}
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="4" [rowspan]="1" mat-chip-list>
+        {{ consultant.location }}
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1" mat-chip-list>
+        {{ consultant.gender }}
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <app-consultant-comments [consultanComents]="consultant.comments"></app-consultant-comments>
+
+
+
+  </mat-card>
+
+  <button mat-raised-button color="primary" [routerLink]="['/consultores']">Volver</button>
 </div>
-
-<mat-card *ngIf="consultant" class="consultant">
-
-  <mat-grid-list cols="10" rowHeight="250px">
-
-    <mat-grid-tile [colspan]="8" [rowspan]="1" mat-chip-list>
-      <mat-card-title>
-        {{ consultant.full_name }}
-      </mat-card-title>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="1">
-      <img mat-card-image [src]="consultant.profile_picture" class="profile-id">
-    </mat-grid-tile>
-  </mat-grid-list>
-  <mat-grid-list cols="10">
-
-
-
-    <mat-grid-tile [colspan]="1" [rowspan]="1">
-      {{ consultant.id }}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="1" mat-chip-list>
-      {{ consultant.short_name }}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="1" mat-chip-list>
-      {{ consultant.email }}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="4" [rowspan]="1" mat-chip-list>
-      {{ consultant.location }}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="1" mat-chip-list>
-      {{ consultant.gender }}
-    </mat-grid-tile>
-  </mat-grid-list>
-
-
-</mat-card>
-
-<button mat-raised-button color="primary" [routerLink]="['/consultores']">Volver</button>

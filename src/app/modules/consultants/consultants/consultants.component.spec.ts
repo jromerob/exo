@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConsultantsComponent } from './consultants.component';
+import { ConsultantCommentsComponent } from '../consultant-comments/consultant-comments.component';
 import { ConsultantsService } from '../consultants.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../../shared/shared.module';
@@ -17,7 +18,7 @@ describe('ConsultantsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule, SharedModule, AppRoutingModule],
-      declarations: [ConsultantsComponent, HomeComponent, ConsultantDetailComponent],
+      declarations: [ConsultantsComponent, HomeComponent, ConsultantDetailComponent, ConsultantCommentsComponent],
       providers: [ConsultantsService, { provide: APP_BASE_HREF, useValue: '/' }]
     })
       .compileComponents();
