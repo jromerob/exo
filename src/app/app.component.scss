@@ -1,34 +1,69 @@
+$max-content-width: 860px;
+
+.clicable {
+  cursor: pointer;
+}
+
 body,
 html {
   height: 100%;
+  width: 100%;
   margin: 0;
 }
 
 app-root {
-  .flexbox-parent {
+  height: 100%;
+  display: block;
+
+  mat-form-field.full-width {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
   }
 
-  .flexbox-item-grow {
-    flex: 1;
-    /* same as flex: 1 1 auto; */
+  .mat-progress-spinner {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    z-index: 9999;
   }
-
-  .fill-area {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
-  }
-
+  // .flexbox-parent {
+  //   width: 100%;
+  //   height: 100%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   align-items: stretch;
+  //   align-content: stretch;
+  // }
+  //
+  // .flexbox-item-grow {
+  //   flex: 1;
+  //   /* same as flex: 1 1 auto; */
+  // }
+  //
+  // .fill-area {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: flex-start;
+  //   align-items: stretch;
+  //   align-content: stretch;
+  // }
+  //
+  // .fill-area-content {
+  //   overflow: auto;
+  //   //margin: 0 auto;
+  // }
   .fill-area-content {
-    overflow: auto;
+    height: calc(100% - 64px);
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+
+    .container {
+      margin: 0 auto;
+      padding: 2rem 0;
+      max-width: $max-content-width;
+    }
   }
 }

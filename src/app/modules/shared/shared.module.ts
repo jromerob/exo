@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from '../../app-routing.module';
 import {
   MatButtonModule,
   MatMenuTrigger,
@@ -6,9 +7,14 @@ import {
   MatIconModule,
   MatMenuModule,
   MatInputModule,
+  MatSelectModule,
   MatToolbarModule,
   MatCardModule,
-  MatChipsModule
+  MatChipsModule,
+  MatGridListModule,
+  MatProgressSpinnerModule,
+  MatExpansionModule
+
 } from '@angular/material';
 
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -21,9 +27,14 @@ import { MenuComponent } from './menu/menu.component';
     MatIconModule,
     MatMenuModule,
     MatInputModule,
+    MatSelectModule,
     MatToolbarModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatGridListModule,
+    MatProgressSpinnerModule,
+
+    AppRoutingModule
   ],
   declarations: [
     ToolbarComponent,
@@ -35,12 +46,16 @@ import { MenuComponent } from './menu/menu.component';
     MatIconModule,
     MatMenuModule,
     MatInputModule,
+    MatSelectModule,
     MatToolbarModule,
     MatCardModule,
     MatChipsModule,
     MatIconModule,
     ToolbarComponent,
-    MenuComponent
+    MatGridListModule,
+    MenuComponent,
+    MatProgressSpinnerModule,
+
   ]
 })
 export class SharedModule { }

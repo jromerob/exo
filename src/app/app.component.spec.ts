@@ -3,16 +3,23 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 import { SharedModule } from './modules/shared/shared.module';
+import { ConsultantsModule } from './modules/consultants/consultants.module';
+import { HomeComponent } from './components/home/home.component';
+
+import { APP_BASE_HREF } from '@angular/common';
+
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule, SharedModule
+        RouterTestingModule, SharedModule, ConsultantsModule
       ],
       declarations: [
-        AppComponent
+        AppComponent, HomeComponent
       ],
+      providers: [{ provide: APP_BASE_HREF, useValue: '/' }]
     }).compileComponents();
   }));
   it('Se Crea la app', async(() => {
