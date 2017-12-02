@@ -10,7 +10,8 @@
 
       <mat-grid-tile [colspan]="8" [rowspan]="1" mat-chip-list>
         <mat-card-title class="consultant_title">
-          {{ consultant.full_name }} ({{ consultant.short_name }})
+          <img *ngIf="consultant.gender=='M'" [src]="'assets/male.png'" class="genderIcon">
+          <img *ngIf="consultant.gender=='W'" [src]="'assets/female.png'" class="genderIcon"> {{ consultant.full_name }} ({{ consultant.short_name }})
         </mat-card-title>
       </mat-grid-tile>
       <mat-grid-tile [colspan]="2" [rowspan]="1">

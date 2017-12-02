@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
 
+  .genderIcon {
+    height: 3rem;
+  }
+
   mat-card-actions.mat-card-actions {
     text-align: right;
   }

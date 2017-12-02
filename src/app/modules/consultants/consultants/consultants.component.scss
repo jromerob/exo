@@ -1,4 +1,10 @@
+@import '~@angular/material/theming';
+
 app-consultants {
+  mat-card.consultant:hover {
+    background-color: #f5f5f5;
+  }
+
   .consultant .mat-grid-tile .mat-figure {
     justify-content: left;
   }

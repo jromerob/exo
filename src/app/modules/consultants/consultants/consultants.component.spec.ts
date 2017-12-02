@@ -8,6 +8,8 @@ import { SharedModule } from '../../shared/shared.module';
 import { HomeComponent } from '../../../components/home/home.component';
 import { ConsultantDetailComponent } from '../../../modules/consultants/consultant-detail/consultant-detail.component';
 import { AppRoutingModule } from '../../..//app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { APP_BASE_HREF } from '@angular/common';
 
 
@@ -17,7 +19,7 @@ describe('ConsultantsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule, SharedModule, AppRoutingModule],
+      imports: [HttpClientModule, SharedModule, AppRoutingModule, FormsModule],
       declarations: [ConsultantsComponent, HomeComponent, ConsultantDetailComponent, ConsultantCommentsComponent],
       providers: [ConsultantsService, { provide: APP_BASE_HREF, useValue: '/' }]
     })

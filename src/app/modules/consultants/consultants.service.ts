@@ -46,12 +46,12 @@ export class ConsultantsService {
     );
   }
 
-  setComment(comment: ConsultantComent) {
+  setComment(comment: ConsultantComent): Observable<ConsultantComent> {
 
     return this.httpClient.post(`${this.COMMENT_SAVE_ENDPOINT}`, comment).pipe(
       map(response => {
-        console.log('Respuesta -> ' + response);
-        return response;
+        //console.log('Respuesta -> ' + response);
+        return <ConsultantComent>response;
       }
       )
     );

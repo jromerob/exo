@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
-import { NgModel } from '@angular/forms';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { NgModel, FormControl, Validators } from '@angular/forms';
 import { ConsultantComent } from '../consultant-comment.model';
 import { ConsultantsService } from '../consultants.service';
 
@@ -13,12 +13,18 @@ export class ConsultantCommentsComponent implements OnInit {
 
   @Input() consultantComents: ConsultantComent[];
   @Input() consultantId: number;
+
+  RATING_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   newComment: ConsultantComent;
   addingComment: boolean = false;
-  @ViewChild('addform') addform;
+
+  formControl = new FormControl('', [
+    Validators.required,
+  ]);
 
 
-  constructor(private consultantsService: ConsultantsService, private elementRef: ElementRef) { }
+
+  constructor(private consultantsService: ConsultantsService) { }
 
   ngOnInit() {
 
@@ -28,6 +34,7 @@ export class ConsultantCommentsComponent implements OnInit {
   addNewComment() {
     this.newComment = new ConsultantComent();
     this.addingComment = true;
+    focus
   }
 
 
@@ -47,23 +54,18 @@ export class ConsultantCommentsComponent implements OnInit {
     this.newComment.status = "N";
 
     this.consultantsService.setComment(this.newComment).subscribe(
-      () => this.addingComment = false,
+      (newComent) => {
+        this.addingComment = false
+        this.consultantComents.unshift(newComent)
+      },
       (error) => console.log(error)
     )
 
   }
+
   editComment(coment: ConsultantComent) {
     this.newComment = coment;
     this.addingComment = true;
-    let editForm = this.elementRef.nativeElement.querySelector('#addComment')
-    setTimeout((editForm) => editForm.scrollIntoView(), 500);
-
-
-    //
-    // this.consultantsService.setComment(this.newComment).subscribe(
-    //   () => this.addingComment = false,
-    //   (error) => console.log(error)
-    // )
 
   }
 

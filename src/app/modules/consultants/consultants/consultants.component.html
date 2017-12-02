@@ -2,7 +2,7 @@
 </mat-progress-spinner>
 
 <div class="container">
-  <mat-card *ngFor="let consultant of consultantsService.consultants" class="consultant" [routerLink]="['/consultor', consultant.id]">
+  <mat-card *ngFor="let consultant of consultantsService.consultants" class="consultant clicable" [routerLink]="['/consultor', consultant.id]">
 
     <mat-grid-list cols="4" rowHeight="30px">
       <mat-grid-tile [colspan]="3" [rowspan]="1" mat-chip-list>
