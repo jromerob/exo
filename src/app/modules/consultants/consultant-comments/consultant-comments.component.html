@@ -1,7 +1,53 @@
 <h2>
     Comentarios
-  </h2>
-<mat-card *ngFor="let coment of consultanComents">
-  {{coment.body}}
+</h2>
+<div class="buttonBar">
+  <button mat-raised-button color="primary" (click)="addNewComment()">Añadir Comentario</button>
+</div>
+<mat-card *ngIf="addingComment" id="addComment">
+  <mat-card-content>
+    <mat-grid-list cols="12" rowHeight="100px">
+      <mat-grid-tile [colspan]="10">
+        <mat-form-field class="full-width">
+          <input [(ngModel)]="newComment.subject" matInput placeholder="Asunto">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2">
+        <mat-form-field class="full-width">
+          <input [(ngModel)]="newComment.rating" matInput placeholder="Puntuación">
 
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="12">
+        <mat-form-field class="full-width">
+          <input [(ngModel)]="newComment.body" matInput placeholder="Comentario">
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="cancelNewComment()">Cancelar</button>
+    <button mat-raised-button color="primary" (click)="saveNewComment()">Guardar</button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card *ngFor="let coment of consultantComents">
+  <mat-card-title>
+    {{coment.subject}}
+  </mat-card-title>
+  <mat-card-content>
+    <div class="rating">
+      <span class="rating" *ngIf="coment.rating>9"> {{coment.rating}}</span><img *ngFor="let star of getRateStars(coment.rating)" [src]='star'>
+    </div>
+    {{coment.body}}
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="editComment(coment)">Editar Comentario</button>
+
+    <mat-chip-list>
+      <mat-chip> Creado: {{coment.created|date:medium}}</mat-chip>
+      <mat-chip> Modificado: {{coment.modified|date:medium}}</mat-chip>
+      <mat-chip> Estado: {{coment.status}}</mat-chip>
+    </mat-chip-list>
+  </mat-card-actions>
 </mat-card>

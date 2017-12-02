@@ -2,4 +2,30 @@ app-consultant-comments {
   .mat-card {
     margin-bottom: 1rem;
   }
+
+  .buttonBar {
+    margin: 1rem 0;
+  }
+
+  span.rating {
+    font-size: 25px;
+    line-height: 0;
+    margin-right: 15px;
+    display: block;
+  }
+
+  .rating {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .mat-chip-list-wrapper {
+    flex-direction: row-reverse;
+  }
+
+  .mat-chip {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }

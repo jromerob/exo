@@ -7,44 +7,48 @@ html {
 }
 
 app-root {
+  mat-form-field.full-width {
+    width: 100%;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+  }
+
   .mat-progress-spinner {
     position: absolute;
     top: 50%;
     left: 45%;
     z-index: 9999;
   }
-
-  .flexbox-parent {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
-  }
-
-  .flexbox-item-grow {
-    flex: 1;
-    /* same as flex: 1 1 auto; */
-  }
-
-  .fill-area {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    align-content: stretch;
-  }
-
-  .fill-area-content {
-    overflow: auto;
-    //margin: 0 auto;
-  }
-
+  // .flexbox-parent {
+  //   width: 100%;
+  //   height: 100%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   align-items: stretch;
+  //   align-content: stretch;
+  // }
+  //
+  // .flexbox-item-grow {
+  //   flex: 1;
+  //   /* same as flex: 1 1 auto; */
+  // }
+  //
+  // .fill-area {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: flex-start;
+  //   align-items: stretch;
+  //   align-content: stretch;
+  // }
+  //
+  // .fill-area-content {
+  //   overflow: auto;
+  //   //margin: 0 auto;
+  // }
   .fill-area-content .container {
-    //overflow: auto;
     margin: 0 auto;
+    padding: 2rem 0;
     max-width: $max-content-width;
   }
 }

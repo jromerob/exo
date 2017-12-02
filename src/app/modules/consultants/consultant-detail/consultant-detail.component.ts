@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { ConsultantsService } from '../consultants.service';
 import { Consultant } from '../consultant.model';
+import { DatePipe } from '@angular/common';
 
 
 @Component({
   selector: 'app-consultant-detail',
   templateUrl: './consultant-detail.component.html',
-  styleUrls: ['./consultant-detail.component.scss']
+  styleUrls: ['./consultant-detail.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ConsultantDetailComponent implements OnInit {
 
