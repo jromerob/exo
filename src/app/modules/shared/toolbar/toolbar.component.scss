@@ -1,4 +1,6 @@
 app-toolbar {
+  z-index: 999;
+
   .toolbar-spacer {
     border-left: 2px solid white;
     flex: 1 1 auto;
@@ -7,6 +9,6 @@ app-toolbar {
   img.logo {
     max-height: 100%;
     width: 200px;
-    max-width: 100%;
+    max-width: 40%;
   }
 }

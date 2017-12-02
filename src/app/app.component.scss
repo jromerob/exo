@@ -7,10 +7,14 @@ $max-content-width: 860px;
 body,
 html {
   height: 100%;
+  width: 100%;
   margin: 0;
 }
 
 app-root {
+  height: 100%;
+  display: block;
+
   mat-form-field.full-width {
     width: 100%;
     padding: 0 0.5rem;
@@ -50,9 +54,16 @@ app-root {
   //   overflow: auto;
   //   //margin: 0 auto;
   // }
-  .fill-area-content .container {
-    margin: 0 auto;
-    padding: 2rem 0;
-    max-width: $max-content-width;
+  .fill-area-content {
+    height: calc(100% - 64px);
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+
+    .container {
+      margin: 0 auto;
+      padding: 2rem 0;
+      max-width: $max-content-width;
+    }
   }
 }
