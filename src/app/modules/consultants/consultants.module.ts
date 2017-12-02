@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 import { CommonModule } from '@angular/common';
 import { ConsultantsComponent } from './consultants/consultants.component';
 import { ConsultantDetailComponent } from './consultant-detail/consultant-detail.component';
@@ -9,7 +11,7 @@ import { ConsultantCommentsComponent } from './consultant-comments/consultant-co
 
 @NgModule({
   imports: [
-    CommonModule, SharedModule, AppRoutingModule
+    CommonModule, SharedModule, AppRoutingModule, FormsModule
   ],
   declarations: [ConsultantsComponent, ConsultantDetailComponent, ConsultantCommentsComponent],
   providers: [ConsultantsService],

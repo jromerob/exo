@@ -1,14 +1,16 @@
 export class ConsultantComent {
 
   id: number;
-  created: string;
-  modified: string;
+  created: Date;
+  modified: Date;
   subject: string;
   body: string;
   status: string;
   rating: string;
   user: string;
   consultant: number;
+
+  constructor() { };
 
 
 }

@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 
 import { Consultant } from './consultant.model';
+import { ConsultantComent } from './consultant-comment.model';
 
 
 @Injectable()
@@ -16,6 +17,8 @@ export class ConsultantsService {
 
   CONSULTANTS_ENDPOINT = 'http://demopeople.exolever.com/api/consultants/ ';
   CONSULTANT_ENDPOINT = 'http://demopeople.exolever.com/api/consultants/';
+  COMMENT_SAVE_ENDPOINT = 'http://demopeople.exolever.com/api/comment/';
+
 
   constructor(private httpClient: HttpClient) { }
 
@@ -38,6 +41,17 @@ export class ConsultantsService {
       map(response => {
         console.log('Respuesta -> ' + response);
         return <Consultant>response;
+      }
+      )
+    );
+  }
+
+  setComment(comment: ConsultantComent) {
+
+    return this.httpClient.post(`${this.COMMENT_SAVE_ENDPOINT}`, comment).pipe(
+      map(response => {
+        console.log('Respuesta -> ' + response);
+        return response;
       }
       )
     );
