@@ -1,14 +1,14 @@
 import { AppPage } from './app.po';
 
-describe('exo App', () => {
+describe('pagina de inicio', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('Muestra el logo de home', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getLogo).not.toBeNull()
   });
 });
