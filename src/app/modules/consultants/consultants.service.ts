@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
@@ -15,7 +14,7 @@ export class ConsultantsService {
   consultants: Consultant[];
 
 
-  CONSULTANTS_ENDPOINT = 'http://demopeople.exolever.com/api/consultants/ ';
+  CONSULTANTS_ENDPOINT = 'http://demopeople.exolever.com/api/consultants/';
   CONSULTANT_ENDPOINT = 'http://demopeople.exolever.com/api/consultants/';
   COMMENT_SAVE_ENDPOINT = 'http://demopeople.exolever.com/api/comment/';
 

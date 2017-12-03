@@ -2,9 +2,6 @@
   <mat-toolbar-row>
     <img [src]="'./assets/logo.png'" alt="Exo Consultants" class="logo pull-left">
     <span class="toolbar-spacer"></span>
-
-    <a mat-button routerLink="/inicio" routerLinkActive="active">Inicio</a>
-    <a mat-button routerLink="/consultores" routerLinkActive="active">Consultores</a>
-
+    <ng-content></ng-content>
   </mat-toolbar-row>
 </mat-toolbar>

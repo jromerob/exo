@@ -33,7 +33,6 @@ import { MenuComponent } from './menu/menu.component';
     MatChipsModule,
     MatGridListModule,
     MatProgressSpinnerModule,
-
     AppRoutingModule
   ],
   declarations: [

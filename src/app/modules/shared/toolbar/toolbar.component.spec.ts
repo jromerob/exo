@@ -27,7 +27,12 @@ describe('ToolbarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debe crearse', () => {
     expect(component).toBeTruthy();
   });
+  it("Debe tener un logo", async(() => {
+    const fixture = TestBed.createComponent(ToolbarComponent);
+    const logo = fixture.debugElement.nativeElement.querySelector(".logo")
+    expect(logo).not.toBe(null);
+  }));
 });

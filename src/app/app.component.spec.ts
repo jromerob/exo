@@ -32,6 +32,11 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Exo');
   }));
+  it("Debería tener el componente toolbar", async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const toolbar = fixture.debugElement.nativeElement.querySelector("app-toolbar")
+    expect(toolbar).not.toBe(null);
+  }));
   // it('should render title in a h1 tag', async(() => {
   //   const fixture = TestBed.createComponent(AppComponent);
   //   fixture.detectChanges();

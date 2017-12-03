@@ -12,7 +12,6 @@ import { ConsultantsModule } from './modules/consultants/consultants.module';
 
 
 import { HomeComponent } from './components/home/home.component';
-import { DatePipe } from './pipes/date.pipe';
 
 import { LOCALE_ID } from '@angular/core';
 import localeES from '@angular/common/locales/es';
@@ -24,7 +23,6 @@ registerLocaleData(localeES);
   declarations: [
     AppComponent,
     HomeComponent,
-    DatePipe
   ],
   imports: [
     BrowserModule,

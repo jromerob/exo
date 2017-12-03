@@ -32,7 +32,8 @@ describe('ConsultantsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Debería crearse', () => {
     expect(component).toBeTruthy();
   });
+
 });
