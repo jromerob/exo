@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('exo App', () => {
+describe('pagina de inicio', () => {
   let page: AppPage;
 
   beforeEach(() => {
@@ -9,6 +9,6 @@ describe('exo App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getLogo).not.toBeNull()
   });
 });
