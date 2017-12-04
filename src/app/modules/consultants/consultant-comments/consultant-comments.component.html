@@ -2,7 +2,7 @@
     Comentarios
 </h2>
 <div class="buttonBar">
-  <button mat-raised-button color="primary" (click)="addNewComment()">Añadir Comentario</button>
+  <button mat-raised-button id="addCommentButton" color="primary" (click)="addNewComment()">Añadir Comentario</button>
 </div>
 <mat-card *ngIf="addingComment" id="addComment">
   <mat-card-content>
