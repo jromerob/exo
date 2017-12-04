@@ -1,0 +1,80 @@
+<mat-progress-spinner *ngIf="loadingData && !consultant" [color]="'primary'" [mode]="'indeterminate'" [value]="'50'">
+</mat-progress-spinner>
+
+<div *ngIf="consultant" class="container">
+
+
+  <mat-card *ngIf="consultant" class="consultant">
+
+    <mat-grid-list cols="10" rowHeight="250px">
+
+      <mat-grid-tile [colspan]="8" [rowspan]="1" mat-chip-list>
+        <mat-card-title class="consultant_title">
+          <img *ngIf="consultant.gender=='M'" [src]="'assets/male.png'" class="genderIcon">
+          <img *ngIf="consultant.gender=='W'" [src]="'assets/female.png'" class="genderIcon"> {{ consultant.full_name }} ({{ consultant.short_name }})
+        </mat-card-title>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <img mat-card-image [src]="consultant.profile_picture" class="profile-id">
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="12" rowHeight="100px">
+
+      <mat-grid-tile [colspan]="1">
+        <mat-form-field class="full-width">
+          <input matInput readonly placeholder="id" [value]="consultant.id">
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="4" [rowspan]="1" mat-chip-list>
+        <mat-form-field class="full-width">
+          <input matInput readonly placeholder="Email" [value]="consultant.email">
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="5" [rowspan]="1" mat-chip-list>
+        <mat-form-field class="full-width">
+          <input matInput readonly placeholder="Ubicación" [value]="consultant.location">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1" mat-chip-list>
+        <mat-form-field class="full-width">
+          <input matInput readonly placeholder="Género" [value]="consultant.gender">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1">
+        <mat-form-field class="full-width">
+          <input matInput readonly placeholder="Estado" [value]="consultant.status">
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="4">
+        <mat-form-field class="full-width">
+          <input matInput readonly placeholder="Creado" [value]="consultant.created|date:longDate">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="4">
+        <mat-form-field class="full-width">
+          <input matInput readonly placeholder="Se unió" [value]="consultant.date_joined|date:longDate">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="4">
+        <mat-form-field class="full-width">
+          <input matInput readonly placeholder="Modificado" [value]="consultant.modified|date:longDate">
+        </mat-form-field>
+      </mat-grid-tile>
+
+
+    </mat-grid-list>
+
+
+    <app-consultant-comments [consultantId]="consultant.id" [consultantComents]="consultant.comments"></app-consultant-comments>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" [routerLink]="['/consultores']">Volver</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+</div>
