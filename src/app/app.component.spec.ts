@@ -8,8 +8,6 @@ import { HomeComponent } from './components/home/home.component';
 
 import { APP_BASE_HREF } from '@angular/common';
 
-
-
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -32,15 +30,10 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Exo');
   }));
-  it("Debería tener el componente toolbar", async(() => {
+  it('Debería tener el componente toolbar', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    const toolbar = fixture.debugElement.nativeElement.querySelector("app-toolbar")
+    const toolbar = fixture.debugElement.nativeElement.querySelector('app-toolbar');
     expect(toolbar).not.toBe(null);
   }));
-  // it('should render title in a h1 tag', async(() => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
-  // }));
+
 });

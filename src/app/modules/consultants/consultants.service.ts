@@ -6,21 +6,16 @@ import { HttpClient } from '@angular/common/http';
 import { Consultant } from './consultant.model';
 import { ConsultantComent } from './consultant-comment.model';
 
-
 @Injectable()
 export class ConsultantsService {
 
-
   consultants: Consultant[];
-
 
   CONSULTANTS_ENDPOINT = 'http://demopeople.exolever.com/api/consultants/';
   CONSULTANT_ENDPOINT = 'http://demopeople.exolever.com/api/consultants/';
   COMMENT_SAVE_ENDPOINT = 'http://demopeople.exolever.com/api/comment/';
 
-
   constructor(private httpClient: HttpClient) { }
-
 
   getConsultants() {
     return this.httpClient.get(this.CONSULTANTS_ENDPOINT).pipe(
@@ -32,7 +27,6 @@ export class ConsultantsService {
       )
     );
   }
-
 
   getConsultantbyID(consultantID: string) {
     console.log('Peticion:' + `${this.CONSULTANT_ENDPOINT}${consultantID}/`);
@@ -49,12 +43,10 @@ export class ConsultantsService {
 
     return this.httpClient.post(`${this.COMMENT_SAVE_ENDPOINT}`, comment).pipe(
       map(response => {
-        //console.log('Respuesta -> ' + response);
         return <ConsultantComent>response;
       }
       )
     );
   }
-
 
 }

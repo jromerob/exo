@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
 
 import { APP_BASE_HREF } from '@angular/common';
 
-
 describe('ConsultantsComponent', () => {
   let component: ConsultantsComponent;
   let fixture: ComponentFixture<ConsultantsComponent>;

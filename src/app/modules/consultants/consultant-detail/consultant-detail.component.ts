@@ -4,7 +4,6 @@ import { ConsultantsService } from '../consultants.service';
 import { Consultant } from '../consultant.model';
 import { DatePipe } from '@angular/common';
 
-
 @Component({
   selector: 'app-consultant-detail',
   templateUrl: './consultant-detail.component.html',
@@ -24,7 +23,6 @@ export class ConsultantDetailComponent implements OnInit {
     this.loadingData = true;
     this.activateRoute.paramMap.subscribe(
       (params: ParamMap) => {
-        console.log('param ' + params.get('id'));
         this.consultantsService.getConsultantbyID(params.get('id')).subscribe(
           (response) => {
             this.consultant = response;
@@ -34,7 +32,6 @@ export class ConsultantDetailComponent implements OnInit {
       }
     );
   }
-
 
   ngOnInit() {
 

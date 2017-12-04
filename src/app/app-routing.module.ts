@@ -5,7 +5,6 @@ import { HomeComponent } from './components/home/home.component';
 import { ConsultantsComponent } from './modules/consultants/consultants/consultants.component';
 import { ConsultantDetailComponent } from './modules/consultants/consultant-detail/consultant-detail.component';
 
-
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
   { path: 'consultores', component: ConsultantsComponent },

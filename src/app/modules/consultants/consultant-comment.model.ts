@@ -10,7 +10,6 @@ export class ConsultantComent {
   user: string;
   consultant: number;
 
-  constructor() { };
-
+  constructor() { }
 
 }

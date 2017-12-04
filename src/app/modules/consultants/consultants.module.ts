@@ -11,8 +11,6 @@ import { ConsultantDetailComponent } from './consultant-detail/consultant-detail
 
 import { ConsultantsService } from './consultants.service';
 
-
-
 @NgModule({
   imports: [
     CommonModule, SharedModule, AppRoutingModule, FormsModule

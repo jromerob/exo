@@ -10,14 +10,12 @@ import { SharedModule } from './modules/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConsultantsModule } from './modules/consultants/consultants.module';
 
-
 import { HomeComponent } from './components/home/home.component';
 
 import { LOCALE_ID } from '@angular/core';
 import localeES from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 registerLocaleData(localeES);
-
 
 @NgModule({
   declarations: [
@@ -32,7 +30,7 @@ registerLocaleData(localeES);
     SharedModule,
     ConsultantsModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: "es-ES" }],
+  providers: [{ provide: LOCALE_ID, useValue: 'es-ES' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

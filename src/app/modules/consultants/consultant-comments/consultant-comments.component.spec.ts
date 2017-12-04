@@ -11,7 +11,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
 
-
 describe('ConsultantCommentsComponent', () => {
   let component: ConsultantCommentsComponent;
   let fixture: ComponentFixture<ConsultantCommentsComponent>;

@@ -6,7 +6,6 @@ import { ConsultantsModule } from '../../consultants/consultants.module';
 import { HomeComponent } from '../../../components/home/home.component';
 import { APP_BASE_HREF } from '@angular/common';
 
-
 describe('ToolbarComponent', () => {
   let component: ToolbarComponent;
   let fixture: ComponentFixture<ToolbarComponent>;
@@ -30,9 +29,9 @@ describe('ToolbarComponent', () => {
   it('Debe crearse', () => {
     expect(component).toBeTruthy();
   });
-  it("Debe tener un logo", async(() => {
-    const fixture = TestBed.createComponent(ToolbarComponent);
-    const logo = fixture.debugElement.nativeElement.querySelector(".logo")
+  it('Debe tener un logo', async(() => {
+    fixture = TestBed.createComponent(ToolbarComponent);
+    const logo = fixture.debugElement.nativeElement.querySelector('.logo');
     expect(logo).not.toBe(null);
   }));
 });

@@ -9,6 +9,6 @@ describe('pagina de inicio', () => {
 
   it('Muestra el logo de home', () => {
     page.navigateTo();
-    expect(page.getLogo).not.toBeNull()
+    expect(page.getLogo).not.toBeNull();
   });
 });
